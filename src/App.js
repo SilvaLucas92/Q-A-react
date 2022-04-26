@@ -1,0 +1,20 @@
+import React from 'react';
+import data from './data';
+import SingleQuestion from './Question';
+
+function App() {
+  return(
+    <main>
+      <div className='container'>
+        <h3>questions and answers about login</h3>
+        <section className='info'>
+          {data && data.map(oneData =>
+            <SingleQuestion key={oneData.id} {...oneData}/>
+          )}
+        </section>  
+      </div>
+    </main>
+  )
+}
+
+export default App;
